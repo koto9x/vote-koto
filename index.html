@@ -36,6 +36,8 @@
     --green: #00E676;
     --yellow: #FFB74D;
     --blue: #64B5F6;
+    --cyan: #00E5FF;
+    --amber: #FFAB40;
     --red-dim: #FF3B3B22;
     --green-dim: #00E67622;
     --yellow-dim: #FFB74D22;
@@ -108,6 +110,8 @@
   }
 
   .hero h1 .red { color: var(--red); }
+  .hero h1 .cyan { color: var(--cyan); }
+  .hero h1 .amber { color: var(--amber); }
 
   .hero-sub {
     font-size: 1.1rem;
@@ -199,11 +203,17 @@
 
   .section-label {
     font-family: 'Space Mono', monospace;
-    font-size: 0.65rem;
+    font-size: 0.7rem;
+    font-weight: 700;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: var(--red);
+    color: var(--light);
     margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(255, 59, 59, 0.3);
+  }
+
+  .section-label .num {
+    color: var(--red);
   }
 
   section h2 {
@@ -537,7 +547,7 @@
 <div class="hero">
   <div class="hero-content">
     <div class="hero-badge mono">Community Governance Poll</div>
-    <h1>Should <span class="red">SOAR</span> Host<br>Kotopia's Treasury?</h1>
+    <h1>Should <span class="cyan">SOAR</span> Host<br><span class="amber">KOTOPIA's</span> Treasury?</h1>
     <p class="hero-sub">Vote YES to unlock Kotopia's ~$500K treasury, fund a real game studio in Japan, and ship games in 2026 — or vote NO to shut down the DAO and leave the funds frozen forever.</p>
     <div class="hero-tldr">
       <div class="tldr-label">TL;DR</div>
@@ -553,7 +563,7 @@
 </div>
 
 <section id="why">
-  <div class="section-label mono">01 — Why This Vote Is Happening</div>
+  <div class="section-label mono"><span class="num">01</span> — Why This Vote Is Happening</div>
   <h2>From Experiment to Studio</h2>
   <p>Kotopia started as a Web3 experiment on Daosfun and has grown into the foundations of a real game and character studio: two games in active development (<strong>Kotopia World Hub</strong> and <strong>Kotopia World Skate</strong>), two core IP characters (<strong>KOTO</strong> and <strong>KAIOS</strong>), multiple surfaces spanning games, digital goods, physical merch, and IRL experiences, and 20+ relationship conversations active in Japan's gaming and creative community.</p>
   <p><strong>The core problem:</strong> our $400–500K treasury is effectively frozen. A Daosfun platform update locked all DAOs — including Kotopia — behind manual approval from the Daosfun team for every single transaction. This was extremely limiting during a period of heavy building and capital deployment. It didn't kill Kotopia, but it proved clearly that we have outgrown the current host platform.</p>
@@ -568,7 +578,7 @@
 <div class="divider"><hr></div>
 
 <section>
-  <div class="section-label mono">02 — Token Distribution Transparency</div>
+  <div class="section-label mono"><span class="num">02</span> — Token Distribution Transparency</div>
   <h2>The Elephant in the Room</h2>
   <p>Before asking anyone to vote, we need to address something openly: the largest token holder appears to be a wallet tied to the <strong>Daosfun protocol itself.</strong></p>
   <div class="whale-alert">
@@ -584,7 +594,7 @@
 <div class="divider"><hr></div>
 
 <section>
-  <div class="section-label mono">03 — Why SOAR, Why Not Daosfun</div>
+  <div class="section-label mono"><span class="num">03</span> — Why SOAR, Why Not Daosfun</div>
   <h2>The Platform Mismatch</h2>
   <div class="compare-grid">
     <div class="compare-card bad">
@@ -616,7 +626,7 @@
 <div class="divider"><hr></div>
 
 <section>
-  <div class="section-label mono">04 — What a YES Vote Unlocks</div>
+  <div class="section-label mono"><span class="num">04</span> — What a YES Vote Unlocks</div>
   <h2>2026 Roadmap</h2>
   <div class="quarter-grid">
     <div class="quarter-card">
@@ -659,7 +669,7 @@
 <div class="divider"><hr></div>
 
 <section>
-  <div class="section-label mono">05 — Treasury, Governance & Safeguards</div>
+  <div class="section-label mono"><span class="num">05</span> — Treasury, Governance & Safeguards</div>
   <h2>How Funds Get Used</h2>
   <div class="tab-nav">
     <button class="tab-btn active" onclick="switchTab('treasury')">Treasury Plan</button>
@@ -725,7 +735,7 @@
 <div class="divider"><hr></div>
 
 <section>
-  <div class="section-label mono">06 — What a NO Vote Means</div>
+  <div class="section-label mono"><span class="num">06</span> — What a NO Vote Means</div>
   <h2>The Alternative Is Death</h2>
   <p>If NO wins: the $400–500K treasury remains frozen on legacy infrastructure. The Japan startup visa and studio plan die. Hub and Skate halt development. Merch production cannot be funded. Japan/East Asia momentum built over the last year evaporates. The core team disperses to other work. Token holder "equity" becomes a worthless digital receipt.</p>
   <p style="padding: 1.2rem 1.5rem; border: 1px solid var(--red); background: var(--red-dim); font-family: 'Space Mono', monospace; font-size: 0.9rem; color: var(--light);"><strong>There is no realistic third path.</strong> This is SOAR or shutdown.</p>
@@ -734,7 +744,7 @@
 <div class="divider"><hr></div>
 
 <section>
-  <div class="section-label mono">07 — FAQ</div>
+  <div class="section-label mono"><span class="num">07</span> — FAQ</div>
   <h2>Common Questions</h2>
   <div class="faq-item">
     <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Is the treasury safe during migration?</div>
@@ -761,7 +771,7 @@
 <div class="divider"><hr></div>
 
 <section class="vote-section" id="vote">
-  <div class="section-label mono">08 — The Vote</div>
+  <div class="section-label mono"><span class="num">08</span> — The Vote</div>
   <h2>Your Decision</h2>
   <p style="color: var(--muted); max-width: 600px; margin: 0 auto 2rem;">Binary choice. No middle path. The community decides.</p>
   <div class="vote-grid">
