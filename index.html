@@ -261,7 +261,13 @@
     margin: 2rem 0;
   }
 
-  @media (max-width: 600px) { .compare-grid, .quarter-grid, .vote-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 600px) {
+    .compare-grid, .quarter-grid, .vote-grid { grid-template-columns: 1fr; }
+    .vote-card { text-align: left; padding: 1.5rem; }
+    .vote-card .vote-label { text-align: center; }
+    #typeform-container { margin: 2rem auto !important; }
+    #typeform-container [data-tf-live] { height: 350px !important; }
+  }
 
   .compare-card { padding: 2rem; border: 1px solid var(--border); }
   .compare-card.bad { border-color: #FF3B3B44; }
@@ -804,7 +810,7 @@
 
 <footer>
   <p class="mono">KOTOPIA DAO — Community Governance Poll</p>
-  <p style="margin-top: 0.5rem;">KOTO CLUB, LLC / Asgard Studios — March 2026</p>
+  <p style="margin-top: 0.5rem;">KOTOPIA, Inc. — March 2026</p>
 </footer>
 
 <script>
