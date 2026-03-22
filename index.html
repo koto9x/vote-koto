@@ -262,11 +262,19 @@
   }
 
   @media (max-width: 600px) {
-    .compare-grid, .quarter-grid, .vote-grid { grid-template-columns: 1fr; }
-    .vote-card { text-align: left; padding: 1.5rem; }
-    .vote-card .vote-label { text-align: center; }
-    #typeform-container { margin: 2rem auto !important; }
-    #typeform-container [data-tf-live] { height: 350px !important; }
+    .compare-grid, .quarter-grid { grid-template-columns: 1fr; }
+    .scroll-hint { display: none; }
+    .hero { min-height: auto; padding: 4rem 1.5rem 3rem; }
+    .hero-cta { flex-direction: column; align-items: center; }
+    .hero-cta .btn { width: 100%; text-align: center; }
+    .vote-grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; margin: 1.5rem 0; }
+    .vote-card { padding: 1.2rem 1rem; }
+    .vote-card .vote-label { font-size: 1.4rem; margin-bottom: 0.3rem; }
+    .vote-card .vote-title { font-size: 0.65rem; margin-bottom: 0.5rem; letter-spacing: 0.05em; }
+    .vote-card .vote-desc { font-size: 0.75rem; line-height: 1.4; }
+    .vote-section { padding: 3rem 1rem; }
+    #typeform-container { margin: 1.5rem auto !important; }
+    #typeform-container > div { padding: 1.5rem 1rem !important; }
   }
 
   .compare-card { padding: 2rem; border: 1px solid var(--border); }
@@ -794,14 +802,12 @@
   </div>
 
   <!-- TYPEFORM EMBED -->
-  <div id="typeform-container" style="margin: 3rem auto; max-width: 700px;">
+  <div id="typeform-container" style="margin: 2.5rem auto; max-width: 700px;">
     <div style="padding: 2rem; border: 1px solid var(--border); text-align: center;">
-      <p class="mono" style="font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem;">Cast Your Vote</p>
-      <p style="color: #CCC; font-size: 0.9rem; margin-bottom: 1.5rem;">Anonymous poll powered by Typeform. One response per person. Results are publicly verifiable.</p>
-      
-      <div data-tf-widget="hv8iFWHe" data-tf-opacity="0" data-tf-hide-headers="true" data-tf-hide-footer="true" style="width:100%;height:500px;"></div>
+      <p class="mono" style="font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--red); margin-bottom: 0.8rem;">Cast Your Vote</p>
+      <p style="color: #999; font-size: 0.8rem; margin-bottom: 1.5rem;">Anonymous poll powered by Typeform. One response per person.</p>
+      <button data-tf-popup="hv8iFWHe" data-tf-opacity="100" data-tf-size="70" data-tf-hide-headers="true" data-tf-hide-footer="true" class="btn btn-primary" style="width: 100%; max-width: 320px; font-size: 0.9rem; padding: 1rem 2rem;">Vote Now</button>
       <script src="//embed.typeform.com/next/embed.js"></script>
-
     </div>
   </div>
 
